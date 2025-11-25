@@ -1,272 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ma-3 Connect</title>
-    <link rel="stylesheet" href="./styles.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeride Connect - Premium Transportation</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  </head>
-  <body>
-    <div class="container">
-      <!-- NAVBAR START -->
-      <div class="nav-bar">
-        <div class="main-text">
-          <h1>PRIMERIDE CONNECT
-            <hr>
-          </h1>
-          <a href="#" class="toggle-button">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </a>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="nav-brand">
+                    <h1 class="logo">PRIMERIDE <span>CONNECT</span></h1>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Fleet</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link btn-primary">Book Now</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
         </div>
-        <div class="nav-links">
-          <nav>
-            <ul class="nav-ul">
-              <li><a href="#">HOME</a></li>
-              <li><a href="#">ABOUT</a></li>
-              <li><a href="#">BOOK A RIDE</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <!-- NAVBAR END -->
+    </header>
 
-      <!-- MAIN TEXT START -->
-     
-      <!-- MAIN TEXT END -->
-
-      <!-- HOMEPAGE IMAGE START -->
-      <div class="homepageimage-container">
-        <div class="homepageimage-holder">
-          <img src="../Images/Homepageimage-car.jpg" class="The-mask" alt="The-mask" />
-
-          <!-- HOMEPAGE FORM START -->
-          <div class="form">
-            <form>
-              <h2>DISTANCE | HOURLY | FLAT-RATE</h2>
-              <label for="fname">Pickup-address:</label><br />
-              <input type="text" id="fname" name="fname" value="John" /><br />
-              <label for="lname">Drop off-address:</label><br />
-              <input type="text" id="lname" name="lname" value="Doe" />
-              <label for="lname">Location:</label><br />
-              <input type="text" id="Location" name="lname" value="Doe" />
-              <label for="lname">One way:</label><br />
-              <input type="text" id="lname" name="lname" value="Doe" />
-              <label for="lname">Time</label><br />
-              <input type="text" id="lname" name="lname" value="Doe" />
-
-              ​<button class="reserve-button">Reserve now</button>
-
-              <p class="form-text"><small> Ma-3 Connect &copy; 2024</small></p>
-            </form>
-          </div>
-          <!-- HOMEPAGE FORM END -->
-        </div>
-      </div>
-      <!-- HOMEPAGE IMAGE END -->
-
-      <!-- OUR SERVICES START -->
-      <div class="ma-3connect-services">
-        <div class="services-header">
-          <h1 class="services-header1">Services</h1>
-          <p class="services-mini-header">
-            We invite you to try our services,and we personally guarantee that
-            you will be completely satisfied
-          </p>
-        </div>
-      
-
-      <!-- SERVICES CARDS START -->
-
-      <div class="services-container">
-        <div class="services-cards-container">
-          <div class="service-card1">
-            <div class="servicecard1-container">
-              <img
-                src="../Images/Airport-transport-services.avif"
-                class="airport-transfer-image"
-                alt="airport-transfer-image"
-              />
-
-              <div class="airport-transfer-texts">
-                <p><b>AIRPORT TRANSFERS</b></p>
-                <span class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere
-                quibusdam ducimus magni velit, ullam asperiores quia possimus,
-                quos tempore magnam nostrum saepe consequuntur ea nam cum
-                ratione quas cumque. Neque!</span> 
-                <button>READMORE</button>
-
-              </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2 class="hero-title">Premium Transportation <span>Solutions</span></h2>
+                    <p class="hero-description">Experience luxury, comfort, and reliability with our premium fleet of vehicles for all your transportation needs.</p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-primary">Book a Ride</a>
+                        <a href="#" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                <div class="hero-form">
+                    <div class="form-container">
+                        <h3>Book Your Ride</h3>
+                        <form class="booking-form">
+                            <div class="form-group">
+                                <label for="pickup">Pickup Location</label>
+                                <input type="text" id="pickup" placeholder="Enter pickup address">
+                            </div>
+                            <div class="form-group">
+                                <label for="dropoff">Drop-off Location</label>
+                                <input type="text" id="dropoff" placeholder="Enter destination">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="date">Date</label>
+                                    <input type="date" id="date">
+                                </div>
+                                <div class="form-group">
+                                    <label for="time">Time</label>
+                                    <input type="time" id="time">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Service Type</label>
+                                <select id="service">
+                                    <option value="">Select service</option>
+                                    <option value="distance">Distance</option>
+                                    <option value="hourly">Hourly</option>
+                                    <option value="flat">Flat Rate</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Reserve Now</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="service-card2">
-            <div class="service-card2-container">
-            <img src="../Images/weddingbus.avif" alt="intercity-trips-image" class="intercity-trips-image" />
-            <div class="intercity-trips-texts">
-              <p><b>INTERCITY TRIPS</b></p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere
-              quibusdam ducimus magni velit, ullam asperiores quia possimus,
-              quos tempore magnam nostrum saepe consequuntur ea nam cum ratione
-              quas cumque. Neque!
-              <button>READMORE</button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">We offer a wide range of premium transportation services tailored to your needs</p>
             </div>
-          </div>
-          </div>
-        </div>
-        <div class="services-container2">
-          <div class="services-cards-container2">
-          <div class="service-card3">
-            <div class="service-card3-container">
-              <img src="../Images/brand-promotion.avif" alt="brand-promotion" class="brand-promotion-image" />
-              <div class="brand-promotion-texts">
-                <p><b>BRAND PROMOTION</b></p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptates iusto atque consequatur libero ut quas corrupti ducimus ad quis ullam similique perferendis nostrum, quaerat quod, aspernatur obcaecati, tempora architecto.
-                <button>READMORE</button>
-              </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>Airport Transfers</h3>
+                    <p>Reliable and timely airport transfers with flight tracking for a stress-free travel experience.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h3>Intercity Trips</h3>
+                    <p>Comfortable long-distance travel with professional drivers and premium vehicles.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Corporate Travel</h3>
+                    <p>Professional transportation solutions for business executives and corporate events.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Wedding Services</h3>
+                    <p>Make your special day unforgettable with our luxury wedding transportation.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
-          </div>
-          <div class="service-card4">
-            <div class="service-card4-container">
-              <img src="../Images/weddingbus.avif" alt="wedding-services" class="wedding-services-image" />
-              <div class="wedding-services-texts">
-                <p><b>WEDDING SERVICES</b></p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptates iusto atque consequatur libero ut quas corrupti ducimus ad quis ullam similique perferendis nostrum, quaerat quod, aspernatur obcaecati, tempora architecto.
-                <button>READMORE</button>
-              </div>
+        </div>
+    </section>
+
+    <!-- Fleet Section -->
+    <section class="fleet">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Fleet</h2>
+                <p class="section-subtitle">Choose from our premium selection of vehicles for any occasion</p>
             </div>
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>
-
-      <!-- SERVICES CARDS END -->
-    
-
-
-      <!-- OUR SERVICES END -->
-
-      <!-- OUR FLEET START -->
-
-
-       <div class="ma-3connect-fleet">
-        <div class="fleet-header">
-          <h1 class="fleet-header1">Our Fleet</h1>
-          <p class="fleet-mini-header">
-            We offer an extensive fleet of vehicles including 33 seater buses,
-            14 seater buses and box shuttles
-          </p>
-        </div>
-      
-       </div>
-       
-
-       <div class="fleet-cards-container">
-       <!-- BUTTON OUR-FLEET START-->
-       
-      <!-- <button onclick = slider() class="click" >OYAA</button> -->
-      <!-- BUTTON OUR-FLEET END -->
-        <div class="fleet-cards">
-          <div class="car-container">
-            <img src="../Images/Fleet/LAURENFAMILY.jpg" alt="lauren family" class="lauren-family"/>
-            <h3>LAUREN FAMILY</h3>
-           <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis reiciendis sapiente maiores officiis tenetur, sit enim? Pariatur aliquid assumenda nesciunt.</p>
-            <div class="laurenfamily-footer">
-              <button>BOOK SEAT</button>
+            <div class="fleet-carousel">
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="./Images/Fleet/LAURENFAMILY.jpg" alt="Lauren Family">
+                        <div class="car-overlay">
+                            <button class="btn btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <h3>Lauren Family</h3>
+                        <p>Spacious luxury bus perfect for family trips,friends and small groups.</p>
+                        <div class="car-features">
+                            <span><i class="fas fa-users"></i> 7 Seats</span>
+                            <span><i class="fas fa-suitcase"></i> 4 Bags</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="./Images/Fleet/PIMPMYRIDE-PINK1.png" alt="Pimp My Ride">
+                        <div class="car-overlay">
+                            <button class="btn btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <h3>Pimp My Ride</h3>
+                        <p>Stylish luxury sedan with premium features for business or leisure.</p>
+                        <div class="car-features">
+                            <span><i class="fas fa-users"></i> 4 Seats</span>
+                            <span><i class="fas fa-suitcase"></i> 3 Bags</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="./Images/Fleet/THE-MATRIX.jpg" alt="The Matrix">
+                        <div class="car-overlay">
+                            <button class="btn btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <h3>The Matrix</h3>
+                        <p>Executive class bus with enhanced comfort and technology for city to city trips.</p>
+                        <div class="car-features">
+                            <span><i class="fas fa-users"></i> 30 Seats</span>
+                            <span><i class="fas fa-suitcase"></i> 15 Bags</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="./Images/Fleet/crystlar limo.jpg" alt="Chrysler Limo">
+                        <div class="car-overlay">
+                            <button class="btn btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <h3>Chrysler Limo</h3>
+                        <p>Ultimate luxury limousine for special events and VIP transport.</p>
+                        <div class="car-features">
+                            <span><i class="fas fa-users"></i> 8 Seats</span>
+                            <span><i class="fas fa-suitcase"></i> 6 Bags</span>
+                        </div>
+                    </div>
+                </div>
+                                <div class="car-card">
+                    <div class="car-image">
+                        <img src="./Images/themask.jpg" alt="Chrysler Limo">
+                        <div class="car-overlay">
+                            <button class="btn btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <h3>Mask</h3>
+                        <p>Ultimate luxury pimped matatu for special events and city to city trips.</p>
+                        <div class="car-features">
+                            <span><i class="fas fa-users"></i> 13 Seats</span>
+                            <span><i class="fas fa-suitcase"></i> 10 Bags</span>
+                        </div>
+                    </div>
+                </div>
+                        <div class="car-card">
+                    <div class="car-image">
+                        <img src="./Images/Fleet/Dodge.jpg" alt="Chrysler Limo">
+                        <div class="car-overlay">
+                            <button class="btn btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <h3>Dodge</h3>
+                        <p>Ultimate luxury vehicle for special events and VIP transport.</p>
+                        <div class="car-features">
+                            <span><i class="fas fa-users"></i> 2 Seats</span>
+                            <span><i class="fas fa-suitcase"></i> 3 Bags</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        
+        </div>
+    </section>
 
-        <div class="car-container"> 
-          <img src="../Images/Fleet/PIMPMYRIDE-PINK1.png" alt="pimp my ride" class="pimp-my-ride"/>
-          <h3>PIMP MY RIDE</h3> 
-          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur doloribus ab sint excepturi ut tenetur quibusdam voluptate odit iusto unde!</p>
-          <div class="pimpmyride-footer">
-            <button>BOOK SEAT</button>
-          </div>
-        </div>
-        <div class="car-container">
-          <img src="../Images/Fleet/THE-MATRIX.jpg" alt="The Matrix" class="The-Matrix" />
-          <h3>THE MATRIX</h3>
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non quam fugit voluptatum ab tenetur animi! Temporibus recusandae ut quas nisi.</p>
-          <div class="thematrix-footer">
-            <button>BOOK SEAT</button>
-          </div>
-        </div>
-        <div class="car-container">
-          <img src="../Images/Fleet/crystlar limo.jpg" alt="chryslar limo" class="chryslar-limo" />
-          <h3>CHRYSLAR LIMO</h3>
-          <p>  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam repellat aliquid ipsam! Consectetur commodi dolorum adipisci illum nemo.</p>
-          <div class="crystlar-footer">
-            <button>BOOK SEAT</button>
-          </div>
-        </div>
-        <div class="car-container">
-          <img src="../Images/Fleet/Dodge.jpg" alt="dodge" class="dodge" />
-          <h3>DODGE</h3>
-          <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt magnam ipsam molestias fugit assumenda autem sunt quis quia suscipit ex?</p>
-          <div class="dodge-footer">
-            <button>BOOK SEAT</button>
-          </div>
-        </div>
-        <div class="car-container">
-          <img src="../Images/Fleet/redcar.jpeg" alt="red car" class="red-car" />
-          <h3>RED CAR</h3>
-          <p>  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa earum odit aut, tempore deserunt exercitationem vitae. Magni eos natus animi?</p>
-          <div class="redcar-footer">
-            <button>BOOK SEAT</button>
-          </div>
-        </div>
-        <div class="car-container">
-          <img src="../Images/Fleet/volkswagenvan.jpg" alt="Volkswagen van" class="volkswagen-van" />
-          <h3>VOLKSWAGEN VAN</h3>
-          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus distinctio, ut soluta nemo aperiam nesciunt quia laboriosam facere earum eveniet!</p>
-          <div class="volkswagen-footer">
-            <button>BOOK SEAT</button>
-          </div>
-        </div>
-       </div>
-       <!-- OUR FLEET END -->
-      </div>
-      <!-- FOOTER START -->
-       <footer class="footer">
-        <div class="footer-container">
-          <div class="row">
-            <div class="footer-column">
-              <h4>Company</h4>
-              <ul>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Our services</a></li>
-                <li><a href="#">Privacy policy</a></li>
-                <li><a href="#">Affiliate Programs</a></li>
-              </ul>
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Experience Premium Transportation?</h2>
+                <p>Book your ride now and enjoy our exceptional service</p>
+                <a href="#" class="btn btn-primary btn-large">Book Your Ride Today</a>
             </div>
-            <div class="footer-column">
-              <h4>Get help</h4>
-              <ul>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Returns</a></li>
-                <li><a href="#">Booking status</a></li>
-                <li><a href="#">Payment options</a></li>
-              </ul>
-            </div>
-            <div class="footer-column">
-              <h4>Follow us</h4>
-              <div class="social-links">
-                <a href="#"><i class="fab fa-facebook-f"></i> </a>
-                <a href="#"><i class="fab fa-twitter"></i> </a>
-                <a href="#"><i class="fab fa-instagram"></i> </a>
-                <a href="#"><i class="fab fa-youtube"></i> </a>
-              </div>
-            </div>
-            
-          </div>
         </div>
-       </footer>
-       <!-- FOOTER END -->
-    </div>
-    <script src="../Functionality/script.js"></script>
-  </body>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Primeride Connect</h3>
+                    <p>Premium transportation services with luxury vehicles and professional drivers for all your travel needs.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Fleet</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Airport Transfers</a></li>
+                        <li><a href="#">Corporate Travel</a></li>
+                        <li><a href="#">Wedding Services</a></li>
+                        <li><a href="#">Intercity Trips</a></li>
+                        <li><a href="#">Event Transportation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i>Nairobi, Kenya</li>
+                        <li><i class="fas fa-phone"></i> +254 112389402</li>
+                        <li><i class="fas fa-envelope"></i> info@primerideconnect.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Primeride Connect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>

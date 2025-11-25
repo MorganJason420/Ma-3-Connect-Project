@@ -1,1414 +1,683 @@
-@import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,600");
+/* styles.css */
+:root {
+    --primary: #ffc300;
+    --primary-dark: #e89005;
+    --secondary: #003566;
+    --dark: #001d3d;
+    --light: #f8f9fa;
+    --gray: #6c757d;
+    --white: #ffffff;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    background-color: var(--white);
+    overflow-x: hidden;
+}
+
 .container {
-  max-width: 98%;
-  height: 98%;
-  margin-left: 26px;
-  background-color: white;
-  position: relative;
-  overflow-x: hidden;
-
-}
-/* NAVBAR STYLES START */
-.nav-bar {
-  width: 100%;
-  height: 70px;
-  margin-left: 70px;
-  display: flex;
-  padding: 10px;
-  justify-content: space-between;
-  background-color: #fff;
-}
-.nav-logo {
-  margin-left: 9px;
-  background-color: #fff;
-}
-.ma-3connect-logo {
-  height: 85px;
-  width: 95px;
-  padding: 5px;
-  margin: 5px;
-  margin-left: 15px;
-  margin-top: 15px;
-}
-.nav * {
-  box-sizing: border-box;
-  transition: all 0.35s ease;
-}
-.nav-ul {
-  margin-left: 30px;
-  margin-top: 40px;
-  width: 400px;
-  font-family: "Titillium Web";
-}
-.nav-links{
-  margin-left: 30px;
-  width: 50%;
-}
-.nav-links ul li {
-  width: 10px;
-  height: 40px;
-  display: inline;
-  margin-top: 55px;
-}
-.nav-ul a {
-  padding: 20px 25px;
-  color: rgba(255, 255, 255, 0.5);
-  position: relative;
-  color: #000;
-  text-decoration: none;
-  font-size: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.nav-ul a::before,
-.nav-ul a::after {
-  content: "";
-  height: 14px;
-  width: 14px;
-  position: absolute;
-  transition: all 0.35s ease;
-  opacity: 0;
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
 }
 
-.nav-ul a::before {
-  content: "";
-  right: 0;
-  top: 0;
-  border-top: 3px solid #e89005;
-  border-right: 3px solid #ffba08;
-  transform: translate(-100%, 50%);
+p {
+    margin-bottom: 1rem;
 }
 
-.nav-ul a:after {
-  content: "";
-  left: 0;
-  bottom: 0;
-  border-bottom: 3px solid #ffba08;
-  border-left: 3px solid #e89005;
-  transform: translate(100%, -50%);
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
 }
 
-.nav-ul a:hover:before,
-.nav-ul a:hover:after {
-  transform: translate(0, 0);
-  opacity: 1;
-}
-
-.nav-ul a:hover {
-  color: #ffb703;
-}
-.toggle-button{
-  position: absolute;
-  top: .75rem;
-  right: 1rem;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
- }
- .toggle-button .bar{
-  height: 3px;
-  width: 100%;
-  background-color: black;
-  border-radius: 10px;
-
- }
-/* NAVBAR STYLES END */
-
-/* MAIN TEXT STYLES */
-h1 {
-  width: 60%;
-  height: 100px;
-  font-size: 40px;
-  font-family: "Titillium Web";
-  justify-content: center;
-  /* margin-left: 630px; */
-}
-.main-text {
-  height: 170px;
-  justify-content: center;
-  width: 70%;
-}
-/* .main-text h1 {
-  width: 90%;
-  margin-left: 30%;
-  float: none;
-  justify-content: center;
-  font-weight: 900;
-} */
-hr {
-  width: 58%;
-  height: 2px;
-  margin-top: 2px;
-  background-color: black;
-  margin-left: 0px;
-}
-
-/* MAIN TEXT STYLES END */
-
-/* HOMEPAGE IMAGE START */
-.homepageimage-container {
-  height: 820px;
-  width: 110%;
-  justify-content: space-between;
-  margin-left: 74px;
-  margin-top: 30px;
-}
-.homepageimage-holder {
-  height: 750px;
-  width: 90%;
-  display: flex;
-  align-items: center;
-  margin-top: 20px;
-  border-radius: 5px;
-  position: absolute;
-  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
-
-}
-.homepageimage-holder:hover {
-  transform: scale(1.00); /* Slightly enlarge the card on hover */
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-
-}
-.The-mask {
-  border-radius: 5px;
-  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
-  width: 52%;
-  margin-left: 10px;
-  height: 90%;
-}
-.The-mask:hover {
-  transform: scale(1.00); /* Slightly enlarge the card on hover */
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-
-}
-/* HOMEPAGE IMAGE END */
-
-/* FORM STYLES START */
-.form {
-  height: 750px;
-  width: 35%;
-  margin-left: 120px;
-
-}
-
-label {
-  display: block;
-  margin-top: 0px;
-  font-family: "Titillium Web";
-  font-weight: bold;
-  font-weight: 100;
-}
-input[type="text"] {
-  width: 70%;
-  font-size: 16px;
-  padding: 4px 10px;
-  margin: 1px 0px;
-  font-family: "Titillium Web";
-  transition: width 0.4s ease-in-out;
-  color: rgb(38, 50, 56);
-  font-weight: 700;
-  letter-spacing: 1px;
-  background: rgba(136, 126, 126, 0.04);
-  border: none;
-  border-radius: 20px;
-  outline: none;
-  box-sizing: border-box;
-  border: 2px solid rgba(0, 0, 0, 0.02);
-  margin-bottom: 50px;
-  margin-left: 46px;
-  text-align: center;
-  margin-bottom: 27px;
-}
-input[type="text"]:focus {
-  border: 2px solid rgba(0, 0, 0, 0.18) !important;
-}
-h2 {
-  padding-top: 40px;
-  color: #ffc300;
-  font-family: "Titillium Web";
-  font-weight: bold;
-  font-size: 23px;
-  margin-left: 10px;
-}
-.reserve-button {
-  cursor: pointer;
-  border-radius: 5em;
-  color: #fff;
-  background: linear-gradient(to right, #ffd60a, #ffc300);
-  border: 0;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  font-family: "Titillium Web";
-  margin-left: 130px;
-  font-size: 13px;
-  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
-}
-
-.form-text {
-  font-family: "Titillium Web";
-  margin-left: 140px;
-  font-weight: 10;
-}
-/* FORM STYLES END */
-
-/* SERVICES SECTION STYLES START */
-.services-header{
-  display: flex;
-  width: 280%;
-  height: 200px;
-}
-.services-header1{
-  width: 500px;
-  margin-left: 340px;
-  font-size: 96px;
-  font-weight: 500;
-}
-.services-mini-header{ 
-  margin-top: 120px;
-  width: 500px;
-  font-family: 'Titillium Web';
-  font-weight: 600;
-  color: #6c757d;
-}
-.services-container{
-  width: 98%;
-  height: 130%;
-  overflow: hidden;
-  margin-left: 150px;
-
-}
-.services-cards-container{
-  width: 99%;
-  margin-left: 1px;
-  display: flex;
-}
-.service-card1{
-  width: 40%;
-  height: 380px;
-  display: flex;
-  margin-left: 40px;
-  margin-top: 40px;
-  /* background: #6c757d; */
-}
-.servicecard1-container{
-  width: 100%;
-  background:#edede9;
-  display: flex;
-  border: 5%;
-  border-radius: 4%;
-  margin-left: 0px;
-}
-.airport-transfer-image{
-  width: 247px;
-  height: 280px;
-  margin-top: 53px;
-  margin-left: 50px;
-  border: 5%;
-  border-radius: 4%;
-}
-.airport-transfer-texts{
-  width: 300px;
-  height: 250px;
-  display: block;
-  margin-left: 30px;
-  font-size: 18px;
-  font-weight: lighter;
-  font-family: 'Titillium Web';
-  margin-top: 50px;
-}
-.airport-transfer-texts button{
-  display: block;
-  margin-top: 20px;
-}
-.service-card2{
-  width: 40%;
-  height: 380px;
-  display: flex;
-  /* background: #6c757d; */
-  margin-left: 40px;
-  margin-top: 40px;
-}
-.service-card2-container{
-  width: 100%;
-  background:#edede9;
-  display: flex;
-  border: 5%;
-  border-radius: 4%;
-  margin-left: 0px;
-}
-.intercity-trips-image{
-  width: 300px;
-  height: 280px;
-  margin-top: 53px;
-  margin-left: 50px;
-  border: 5%;
-  border-radius: 4%;
-}
-.intercity-trips-texts{
-  width: 300px;
-  height: 250px;
-  display: block;
-  margin-left: 30px;
-  font-size: 18px;
-  font-weight: lighter;
-  font-family: 'Titillium Web';
-  margin-top: 50px;
-}
-.intercity-trips-texts button{
-  display: block;
-  margin-top: 20px;
-}
-
-.services-container2{
-  width: 98%;
-  height: 80%;
-  margin-top: 40px;
-}
-.services-cards-container2{
-  width: 99%;
-  margin-left: 1px;
-  display: flex;
-}
-
-.service-card3{
-  width: 40.8%;
-  height: 380px;
-  display: flex;
-  /* background: #6c757d; */
-  margin-left: 40px;
-  margin-top: 40px;
-}
-
-.service-card3-container{
-  display: flex;
-  width: 100%;
-  background: #edede9;
-  border: 5%;
-  border-radius: 4%;
-  margin-left: 1px;
-}
-.brand-promotion-image{
-  width: 300px;
-  height: 280px;
-  margin-top: 53px;
-  margin-left: 50px;
-  border: 5%;
-  border-radius: 4%;
-}
-.brand-promotion-texts{
-  width: 300px;
-  height: 250px;
-  display: block;
-  margin-left: 30px;
-  font-size: 18px;
-  font-weight: lighter;
-  font-family: 'Titillium Web';
-  margin-top: 50px;
-}
-.brand-promotion-texts button{
-  display: block;
-  margin-top: 20px;
-}
-
-.service-card4{
-  width: 40.6%;
-  height: 380px;
-  display: flex;
-  /* background: #6c757d; */
-  margin-left: 40px;
-  margin-top: 40px;
-}
-
-.service-card4-container{
-  display: flex;
-  width: 100%;
-  background: #edede9;
-  border: 5%;
-  border-radius: 4%;
-}
-.wedding-services-image{
-  width: 300px;
-  height: 280px;
-  margin-top: 53px;
-  margin-left: 50px;
-  border: 5%;
-  border-radius: 4%;
-}
-.wedding-services-texts{
-  width: 300px;
-  height: 250px;
-  display: block;
-  margin-left: 30px;
-  font-size: 18px;
-  font-weight: lighter;
-
-  font-family: 'Titillium Web';
-  margin-top: 50px;
-}
-.wedding-services-texts button{
-  display: block;
-  margin-top: 20px;
-}
-/* SERVICES SECTION STYLES END */
-
-/* OUR FLEET START */
-.fleet-header{
-  display: flex;
-  width: 1800px;
-  height: 200px;
-}
-.fleet-header1{
-  width: 500px;
-  margin-left: 340px;
-  font-weight: 500;
-  font-size: 96px;
-}
-.fleet-mini-header{ 
-  margin-top: 120px;
-  width: 500px;
-  font-family: 'Titillium Web';
-  font-weight: 600;
-  color: #6c757d;
-}
-
-/* FLEET CARDS START */
-.fleet-cards-container{
-  width: 99%;
-  height: 500px;
-  gap: 40px;
-  display: flex;
-  box-sizing: border-box;
-  margin-top: 50px;
-}
-.fleet-cards{
-  display: flex;
-  gap: 40px;
-  /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); */
-  width: 90%;
-  margin: auto;
-  /* animation: slide 20s linear infinite; */
-  /* margin-right: 1500px; */
-  font-family: 'Titillium Web';
-  font-weight: 300;
-  border: 5%;
-  border-radius: 15px;
-  /* width: 100%; */
-  padding: 50px;
-  overflow: scroll;
-}
-.fleet-cards :hover{
-  /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); */
-
-}
-.lauren-family{
-  width: 80%;
-  height: 230px;
-  padding: 10px;
-  border: 5%;
-  border-radius: 15px;
-  margin-left: 15px;
-}
-.pimp-my-ride{
-  width: 80%;
-  height: 230px;
-  padding: 10px;
-  border: 5%;
-  border-radius: 15px;
-  margin-left: 15px;
-}
-.The-Matrix{
-  width: 80%;
-  height: 230px;
-  padding: 10px;
-  border: 5%;
-  border-radius: 15px;
-  margin-left: 15px;
-}
-.chryslar-limo{
-  width: 80%;
-  height: 230px;
-  padding: 10px;
-  border: 5%;
-  border-radius: 15px;
-  margin-left: 15px;
-}
-.dodge{
-  width: 80%;
-  height: 230px;
-  padding: 10px;
-  border: 5%;
-  border-radius: 15px;
-  margin-left: 15px;
-}
-.red-car{
-  width: 80%;
-  height: 230px;
-  padding: 10px;
-  border: 5%;
-  border-radius: 15px;
-  margin-left: 15px;
-}
-.volkswagen-van{
-  width: 80%;
-  height: 230px;
-  padding: 10px;
-  border: 5%;
-  border-radius: 15px;
-  margin-left: 15px;
-}
-.car-container {
-  width: 23%;
-  flex-shrink: 0; /* Prevent cards from shrinking */
-  background-color: white;
-  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  padding: 2px;
-  box-sizing: border-box;
-  transition: transform 0.3s;
-}
-
-.car-container:hover {
-  transform: scale(1.01); /* Slightly enlarge the card on hover */
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-
-}
-.car-container button {
-  outline: 0;
-  padding: 12px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 130px;
-  font-size: 15px;
-  margin-left: 84px;
-  margin-bottom: 10px;
-  border: 5%;
-  border-radius: 15px;
-}
-.car-container button:hover {
-  opacity: 0.9;
-}
-
-.car-container p {
-  text-align: center;
-  border: 5%;
-  border-radius: 15px;
-  transform: none;
-  transition: none;
-}
-.car-container h3 {
-  text-align: center;
-  border: 5%;
-  border-radius: 15px;
-  transform: none;
-  transition: none;
-}
-@keyframes slide {
-  0% {
-      transform: translateX(0);
-  }
-  100% {
-      transform: translateX(-calc((300px + 40px) * 7)); /* Adjust for number of cards */
-  }
-}
-
-
-/* FLEET CARDS END */
-
-/* OUR FLEET END */
-
-/* FOOTER STYLES START */
-.footer-container{
-  max-width: 1670px;
-  /* background-color: red; */
-  margin: auto;
-  font-family: 'Titillium Web';
-  margin-left: 350px;
-  margin-top: 50px;
-}
-ul{
-  list-style: none;
-}
-.row{
-  display: flex;
-  flex-wrap: wrap;
-
-}
-.footer-column{
-  width: 25%;
-  padding: 0 15px;
-}
-.footer-column h4{
-  font-size: 22px;
-  color: black;
-  text-transform: capitalize;
-  margin-bottom: 30px;
-  font-weight: 500;
-  position: relative;
-}
-.footer-column h4::before{
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  background-color: #ffc300;
-  height: 2px;
-  box-sizing: border-box;
-  width: 50px;
-}
-.footer-column ul li:not(:last-child){
-  margin-bottom: 10px;
-}
-.footer-column ul li a{
-  font-size: 16px;
-  text-transform: capitalize;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 500;
-  color: black;
-  display: block;
-  transition: all 0.3s ease;
-}
-.footer-column ul li a:hover{
-  color: black;
-  padding-left: 8px;
-}
-.footer-column .social-links a{
-  display: inline-block;
-  height: 40px;
-  width: 40px;
-  background-color: rgba(255,255,255,0.2);
-  margin-right: 10px;
-  margin: 0 10px 10px 0;
-  text-align: center;
-  line-height: 40px;
-  border-radius: 50%;
-  color: black;
-  transition: all 0.3s ease;
-}
-.footer-column .social-links a:hover{
-  color: black;
-  background-color: #ffffff;
-}
-.footer{
-  /* background-color: #24262b; */
-  padding: 70px 0;
-  width: 80%;
-}
-
-.click{
-background-color: #e89005;
-color: red;
-border: none;
-border-radius: 5px;
-box-shadow: 3px 3px gray;
-padding: 2px;
-height: 8%;
-width: 15%;
-margin-top: 300px;
-min-height: 30px;
-min-width: 60px;
-
-}
-
-.click:hover {
- background-color: #ffd60a;
- transition: 0.8s;
-}
-
-.click:focus{
-  outline-color: transparent;
-  outline-style: solid;
-  box-shadow: 0 0 0 4px #6c757d;
-  transition: 0.8s;
-}
-
-.click:active{
-  background-color: aquamarine;
-  transition: 0.1s;
-}
-/* FOOTER STYLES END */
-
-
-/* RESPONSIVENESS START */
-@media screen and (max-width: 1200px) {
-  .nav-bar{
-    margin: 0;
-    float: none;
-    width: 95%;
-  }
-  .nav-links{
-    float: none;
-    margin: 0;
-    margin-top: 20px;
-
-  }
-  .main-text{
-    float: none;
-    width: 90%;
-    margin: 0;
-  }
-  .main-text h1{
-    float: none;
-    width: 70%;
-    margin-left: 20px;
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 4px;
     font-weight: 600;
-    margin-top: 2px;
-  }
-  .nav-ul{
-    margin: 0;
-    float: none;
-    margin-top: 4px;
-  }
-  .The-mask{
-    height: 94%;
-    margin: 0;
-    float: none;
-    margin-left: 25px;
-  }
-  .homepageimage-container{
-    margin: 0;
-    float: none;
-    width: 95%;
-    
-  }
-  .homepageimage-holder{
-    margin: 0;
-    float: none;
-    background-color: transparent;
-    background: ('../Images/themask.jpg');
-    opacity: 0.9;
-    box-shadow: none;
-    width: 92%;
-  }
-  .form{
-    margin: 0;
-    float: none;
-    width: 60%;
-    margin-left: 120px;
-  }
-  .form h2{
-    margin: 0;
-    float: none;
-    width: 98%;
-    margin-bottom: 20px;
-  }
-  .reserve-button{
-    margin: 0;
-    float: none;
-    margin-left: 100px;
-  }
-  .form-text{
-    margin: 0;
-    float: none;
-    margin-left: 110px;
-    margin-top: 40px;
-  }
-  .services-header{
-    margin: 0;
-    float: none;
-    width: 98%;
-  }
-  .services-header1{
-    width: 32%;
-    margin: 0;
-    float: none;
-    margin-top: 40px;
-    margin-left: 240px;
-  }
-  .services-mini-header{
-    margin-top: 120px;
-  }
-  .services-container{
-    margin-left: 35px;
-  }
-  .services-cards-container{
-    width: 100%;
-    display: flex;
-  }
-  .servicecard1-container{
-    width: 100%;
-    margin: 0;
-    float: none;
-}
-  .service-card1{
-    margin: 0;
-    float: none;
-    width: 45%;
-    margin-top: 40px;
-
-  }
-  .airport-transfer-image{
-    width: 45%;
-    height: 75%;
-    margin-left: 25px;
-  }
-  .airport-transfer-texts{
-    width: 50%;
-    margin: 0;
-    float: none;
-    margin-left: 15px;
-    margin-top: 20px;
-  }
-
-  .services-cards-container2{
-    display: inline-flex;
-    width: 100%;
-  }
-  .service-card2{
-    width: 46%;
-  }
-  .intercity-trips-texts{
-    width: 50%;
-    margin: 0;
-    float: none;
-    margin-left: 15px;
-    margin-top: 20px;
-  }
-  .intercity-trips-image{
-    width: 45%;
-    height: 75%;
-    margin-left: 25px;
-  }
-  .service-card3 {
-    margin: 0;
-    float: none;
-    width: 46%;
-    margin-top: 40px;
-
-  }
-  .brand-promotion-texts{
-    width: 50%;
-    margin: 0;
-    float: none;
-    margin-left: 15px;
-    margin-top: 20px;
-  }
-  .brand-promotion-image{
-    width: 45%;
-    height: 75%;
-    margin-left: 25px;
-  }
-  .service-card4 {
-    margin: 0;
-    float: none;
-    width: 47%;
-    margin-top: 40px;
-    margin-left: 40px;
-
-  }
-  .wedding-services-image{
-    width: 45%;
-    height: 75%;
-    margin-left: 25px;
-  }
-  .wedding-services-texts{
-    width: 50%;
-    margin: 0;
-    float: none;
-    margin-left: 15px;
-    margin-top: 20px;
-  }
-
-  .fleet-header{
-    margin: 0;
-    float: none;
-    width: 98%;
-  }
-  .fleet-header1{
-    width: 35%;
-    margin: 0;
-    float: none;
-    margin-top: 40px;
-    margin-left: 240px;
-  }
-  .fleet-mini-header{
-    margin-top: 120px;
-    margin-left: 5px;
-    width: 40%;
-  }
-  .fleet-cards button{
-    width: 80%;
-  }
-  .footer-container{
-    width: 100%;
-    margin: 0;
-    float: none;
-    margin-top: 70px;
-    margin-left: 220px;
-  }
-  .row{
-    width: 100%;
-    margin: 0;
-    float: none;
-  }
-  
-}
-
-@media screen and (max-width: 768px) {
-  .main-text{
-    margin: 0;
-    float: none;
-    width: 90%;
-  }
-  .main-text h1{
-   margin: 0;
-   float: none;
-   width: 300px;
-   font-size: xx-large;
-  }
-  .nav-bar{
-    margin: 0;
-    float: none;
-    width: 90%;
-  }
-  .nav-links{
-    margin: 0;
-    float: none;
-    width: 90%;
-    margin-left: 10px;
-    margin-top: 20px;
-    gap: 2px;
-  }
-  hr{
-   width: 98%;
-   margin-left: 8px;
-   margin: 0;
-   float: none;
-  }
-  .nav-ul{
-    margin: 0;
-    float: none;
-    margin-left: 0;
-  }
-  .homepageimage-container{
-   width: 100%;
-   height: 200px;
-   margin-left: 0;
-   float: none;
-   margin-bottom: 290px;
-   box-shadow: none;
-
-  }
-  .homepageimage-holder{
-   width: 130%;
-   margin-top: 35%;
-   display: flex;
-   height: 400px;
-   box-shadow: none;
-
-  }
-  .The-mask{
-   width: 45%;
-   height: 90%;
-   margin: 0;
-   margin-top: -40%;
-   float: none;
-
-  }
-  .form{
-   width:35%;
-   height: 15%;
-   margin-top: -85%;
-   float: none;
-   margin-left: 20px;
-  }
-  h2{
-    font-size: 18px;
-    width: 110%;
-    margin: 0;
-    float: none;
-    margin-bottom: 5px;
-    margin-left: 0;
-    font-weight: 505;
-  }
-  label{
-    width: 90%;
-    font-size: 16px;
-    font-family: 'Titillium Web';
-    font-weight: 10;
-  }
-  input[type="text"] {
-    margin: 0;
-    float: none;
-    border: none;
-    background-color: transparent;
-    margin: 1px 0;
-    margin-top: -5px;
-    margin-left: 45px;
-  }
-  .reserve-button {
-    cursor: pointer;
-    margin: 0;
-    float: none;
-    margin-left: 50px;
-    margin-top: 40px;
-  }
-  .form-text{
-    margin: 0;
-    float: none;
-    font-weight: lighter;
-    margin-left: 70px;
-    margin-top: 5px;
-  }
-  .services-container{
-   width: 250%;
-   margin-top: 1%;
-  }
-  .services-header{
-    margin: 0;
-    float: none;
-    margin-top: 350px;
-    height: 5%;
-
-  }
-  .services-header1{
-    margin: 0;
-    float: none;
-    width: 300px;
-    font-size: 60px;
-    font-weight: 400;
-    margin-top: 18%;
-    margin-left: 9%;
-  }
-  .services-mini-header{
-    margin: 0;
-    float: none;
-    width: 50%;
-    display: flex;
-    margin-left: 5px;
-    margin-top: 160px;
-  }
-  .services-cards-container{
-    display: block;
-    width: 64%;
-    margin: 0;
-  }
-  .servicecard1-container {
-    margin: 0;
-    float: none;
-    margin-left: 40px;
-    width: 100%;
-  }
-  .service-card1{
-    width: 49.5%;
-  }
-
-  .services-cards-container img{
-    width: 40%;
-  }
-  .services-cards-container2{
-    display: block;
-  }
-  .services-cards-container2 img{
-    width: 40%;
-  }
-  .service-card3-container{
-    margin: 0;
-    float: none;
-    margin-left: 40px;
-    width: 100%;
-  }
-  .service-card3{
-    width: 32.4%;
-  }
-  .service-card4-container{
-    margin: 0;
-    float: none;
-    margin-left: 4px;
-    width: 100%;
-  }
-  .service-card4{
-    width: 30.2%;
-  }
-  .fleet-header1{
-    margin: 0;
-    float: none;
-    font-size: 60px;
-    font-weight: 400;
-    margin-left: 70px;
-    margin-top: 80px;
-    width: 50%;
-  }
-  .fleet-mini-header{
-    margin: 0;
-    float: none;
-    width: 60%;
-    margin-left: -60px;
-    margin-top: 120px;
-  }
-  .fleet-cards-container{
-    width: 200%;
-  }
-  .fleet-cards{
-    width: 100%;
-    height: 103%;
-    margin: 0;
-    float: none;
-    margin-top: -80px;
-  }
-  .footer{
-   width: 240%;
-  }
-  .footer-container{
-    margin: 0;
-    float: none;
-    width: 50%;
-    margin-top: 5%;
-  }
- }
-
- @media screen and (max-width: 468px) {
-   .main-text{
-     width: 100%;
-     margin: 0;
-     float: none;
-     margin-left: 0px;
-   }
-   .main-text h1{
-    float: none;
-    margin: 0;
-    justify-content: center;
-    width: 99%;
-    margin-left: 0px;
-  }
-   .toggle-button{
-    display: flex;
-   }
-   .nav-links{
-    display: none;
-    width: 100%;
-    flex-direction: column;
-   }
-   .nav-bar{
-    flex-direction: column;
-    align-items: flex-start;
-   }
-   .nav-links ul{
-    width: 100%;
-    flex-direction: column;
-   }
-   .nav-links li{
     text-align: center;
-   }
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    font-size: 16px;
+}
 
-   .nav-links li a{
-    padding: .5rem 1rem;
-   }
-   .nav-links.active{
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--dark);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 7px 15px rgba(255, 195, 0, 0.3);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--white);
+    color: var(--dark);
+}
+
+.btn-full {
+    width: 100%;
+}
+
+.btn-large {
+    padding: 15px 30px;
+    font-size: 18px;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.navbar {
     display: flex;
-   }
-   hr{
-     margin-top: 30px;
-   }
-   .homepageimage-container{
-     width: 80%;
-     float: none;
-     display: block;
-    }
-    .homepageimage-holder{
-     width: 232%;
-     margin-top: 5%;
-     display: block;
-    }
-    .The-mask{
-     width: 40%;
-     margin: 0;
-     float: none;
-     margin-left: 0px;
-    }
-    .form{
-     width:40%;
-     height: 280px;
-     margin-left: 0px;
-     margin-top: 0px;.service-card1{
-      width: 49.5%;
-    }
-    }
-    .reserve-button{
-      margin-left: 130px;
-    }
-    .form-text{
-      margin-left: 145px;
-    }
-    .ma-3connect-services{
-     width: 100%;
-     display: block;
-     float: none;
-     margin-top: 700px;
-     height: 2000px;
-    }
-    .services-header1{
-      margin: 0;
-      float: none;
-      margin-top: 60px;
-    }
-    .services-mini-header{
-      margin: 0;
-      float: none;
-      margin-top: 70px;
-    }
-    .services-container{
-      margin: 0;
-      float: none;
-    }
-    .services-cards-container{
-     position: relative;
-     margin: 0;
-     display: block;
-     justify-content: center;
-     width: 100%;
-     padding: 0px 11px;
-     margin-left: -40px;
-    }
-    .service-card1{
-     width: 42%;
-     height: 100%;
-     margin: 0;
-     float: none; 
-     margin-top: 140px;
-     margin-left: -10px;
-    }
-    .service-card1-container{
-      height: 90%;
-    }
-    .services-cards-container img{
-      width: 40%;
-      height: 70%;
-      margin-top: 70px;
-    }
-    .airport-transfer-texts{
-      width: 90%;
-      height: 90%;
-      margin-top: 0;
-    }
-    .services-cards2-container{
-      display: block;
-      width: 80%;
-      height: 100%;
-    }
-    .service-card2{
-      margin-left: 32px;
-      width: 38%;
-      height: 100%;
-    }
-    .services-cards-container2 img{
-      width: 40%;
-      height: 70%;
-      margin: 0;
-      float: none;
-      margin-left: 30px;
-      margin-top: 60px;
-    }
-    .intercity-trips-texts{
-      float: none;
-      margin: 0;
-      width: 70%;
-      height: 90%;
-      margin-top: 0;
-      margin-left: 20px;
-    }
-    .services-cards-container2{
-      display: block;
-      height: 80%;
-      margin: 0;
-      float: none;
-    }
-    .service-card3-container{
-      display: flex;
-      width: 2%;
-      height: 95%;
-      margin: 0;
-      float: none;
-      margin-left: 10px;
-    }
-    .service-card3{
-      margin-left: 0px;
-      display: flex;
-      width: 1920%;
-      height: 25%;
-    }
-    img.brand-promotion-image{
-      margin: 0;
-      float: none;
-      width: 40%;
-      height: 65%;
-      margin-left: 30px;
-      margin-top: 60px;
-    }
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
 
-    .brand-promotion-texts{
-      margin: 0;
-      float: none;
-      margin-left: 20px;
-      margin-top: -4px;
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--dark);
+}
 
+.logo span {
+    color: var(--primary);
+}
 
-    }
-    .service-card4-container{
-      margin: 0;
-      float: none;
-      margin-left: 4px;
-      width: 100%;
-      height: 100%;
-      display: flex;
-    }
-    .service-card4{
-      width: 39%;
-      float: none;
-      margin: 0;
-      margin-left: 5px;
-      margin-top: 40px;
-      display: flex;
-      height: 24.5%;
+.nav-menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
 
-    }
-    .wedding-services-texts{
-      margin: 0;
-      float: none;
-      margin-left: 20px;
-    }
-    .wedding-services-image{
-      margin: 0;
-      float: none;
-      margin-left: 120px;
-      height: 80%;
-    }
-    .fleet-header1{
-      width: 100%;
-      margin: 0;
-      float: none;
-      margin-left: 6px;
-    }
-    .fleet-mini-header{
-      margin: 0;
-      float: none;
-      margin-top: 40px;
-    }
-    .fleet-cards button{
-      margin: 0;
-      float: none;
-      margin-top: -50px;
-      margin-left: 18px;
-      height: 45px;
-      text-align: center;
-      cursor: pointer;
-      border: 2%;
-      border-radius: 15px;
-      padding: 12px;
-    }
-    .car-container{
-      height: 109%;
-    }
-    .footer{
-     width: 220%;
-     margin: 0;
-     float: none;
-     margin-left: -10px;
-    }
+.nav-item {
+    margin-left: 25px;
+}
 
- }      
+.nav-link {
+    font-weight: 600;
+    padding: 8px 0;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: var(--transition);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link.btn-primary {
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--dark);
+    margin: 3px 0;
+    transition: var(--transition);
+}
+
+/* Hero Section */
+.hero {
+    padding: 150px 0 80px;
+    background: linear-gradient(rgba(0, 29, 61, 0.8), rgba(0, 29, 61, 0.8)), url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-title span {
+    color: var(--primary);
+}
+
+.hero-description {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.hero-form {
+    flex: 1;
+    max-width: 450px;
+}
+
+.form-container {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: var(--shadow);
+    color: var(--dark);
+    animation: fadeInUp 0.8s ease;
+}
+
+.form-container h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--secondary);
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(255, 195, 0, 0.2);
+}
+
+/* Services Section */
+.services {
+    padding: 80px 0;
+    background-color: var(--light);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 36px;
+    color: var(--secondary);
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary);
+}
+
+.section-subtitle {
+    color: var(--gray);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(255, 195, 0, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transition: var(--transition);
+}
+
+.service-card:hover .service-icon {
+    background-color: var(--primary);
+    transform: rotateY(180deg);
+}
+
+.service-icon i {
+    font-size: 30px;
+    color: var(--primary);
+    transition: var(--transition);
+}
+
+.service-card:hover .service-icon i {
+    color: var(--white);
+}
+
+.service-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: var(--secondary);
+}
+
+.service-card p {
+    color: var(--gray);
+    margin-bottom: 20px;
+}
+
+.service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.service-link:hover {
+    gap: 10px;
+}
+
+/* Fleet Section */
+.fleet {
+    padding: 80px 0;
+}
+
+.fleet-carousel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.car-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.car-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.car-image {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+
+.car-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.car-card:hover .car-image img {
+    transform: scale(1.1);
+}
+
+.car-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 29, 61, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.car-card:hover .car-overlay {
+    opacity: 1;
+}
+
+.car-info {
+    padding: 20px;
+}
+
+.car-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--secondary);
+}
+
+.car-info p {
+    color: var(--gray);
+    margin-bottom: 15px;
+}
+
+.car-features {
+    display: flex;
+    justify-content: space-between;
+}
+
+.car-features span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    color: var(--gray);
+}
+
+/* CTA Section */
+.cta {
+    padding: 80px 0;
+    background: linear-gradient(rgba(0, 53, 102, 0.9), rgba(0, 53, 102, 0.9)), url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.cta-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+.footer-section p {
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a:hover {
+    color: var(--primary);
+    padding-left: 5px;
+}
+
+.contact-info li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background-color: var(--primary);
+    transform: translateY(-5px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-text {
+        max-width: 100%;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .hero-form {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 80%;
+        height: calc(100vh - 70px);
+        background-color: var(--white);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 50px;
+        transition: var(--transition);
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-item {
+        margin: 15px 0;
+    }
+    
+    .hero-title {
+        font-size: 36px;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        padding: 120px 0 60px;
+    }
+    
+    .hero-title {
+        font-size: 28px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .form-container {
+        padding: 20px;
+    }
+}
