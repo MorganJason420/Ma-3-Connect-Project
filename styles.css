@@ -1211,7 +1211,7 @@ min-width: 60px;
      display: block;
     }
     .homepageimage-holder{
-     width: 270%;
+     width: 232%;
      margin-top: 5%;
      display: block;
     }
@@ -1257,12 +1257,12 @@ min-width: 60px;
       float: none;
     }
     .services-cards-container{
-     float: none;
+     position: relative;
      margin: 0;
      display: block;
      justify-content: center;
      width: 100%;
-     padding: 10px 15px;
+     padding: 0px 11px;
      margin-left: -40px;
     }
     .service-card1{
@@ -1402,10 +1402,10 @@ min-width: 60px;
       padding: 12px;
     }
     .car-container{
-      height: 105%;
+      height: 109%;
     }
     .footer{
-     width: 250%;
+     width: 220%;
      margin: 0;
      float: none;
      margin-left: -10px;
